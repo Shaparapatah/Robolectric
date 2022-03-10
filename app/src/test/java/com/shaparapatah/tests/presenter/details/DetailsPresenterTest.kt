@@ -24,18 +24,17 @@ class DetailsPresenterTest {
     }
 
     @Test
-    fun test_setCounter(){
+    fun test_setCounter() {
         count = 0
         presenter.setCounter(count)
     }
 
     @Test
-    fun test_onIncrement(){
+    fun test_onIncrement() {
         count = 0
         presenter.onIncrement()
         count++
         verify(viewContract, times(1)).setCount(count)
-    //    viewContract.setCount(count)
     }
 
     @Test
@@ -43,7 +42,6 @@ class DetailsPresenterTest {
         count = 0
         presenter.onDecrement()
         count--
-//        viewContract.setCount(count)
         verify(viewContract, times(1)).setCount(count)
     }
 }
