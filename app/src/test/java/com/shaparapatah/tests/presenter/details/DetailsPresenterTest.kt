@@ -44,4 +44,18 @@ class DetailsPresenterTest {
         count--
         verify(viewContract, times(1)).setCount(count)
     }
+
+    @Test
+    fun `test onAttach`() {
+        presenter.onAttach()
+        viewContract.setCount(count)
+        verify(viewContract, times(1)).setCount(count)
+    }
+
+    @Test
+    fun `test onDetach`() {
+        presenter.onDetach()
+        viewContract.setCount(count)
+        verify(viewContract, times(1)).setCount(count)
+    }
 }

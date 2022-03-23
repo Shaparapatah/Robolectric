@@ -1,3 +1,8 @@
 package com.shaparapatah.tests.presenter
 
-internal interface PresenterContract {}
+internal interface PresenterContract {
+
+    fun onAttach()
+
+    fun onDetach()
+}
